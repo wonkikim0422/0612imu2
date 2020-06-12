@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="lide">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.10684 0.1189 0.070181"
+        rpy="0 0 0" />
+      <mass
+        value="2.9919" />
+      <inertia
+        ixx="0.0057743"
+        ixy="3.4753E-07"
+        ixz="-4.2091E-07"
+        iyy="0.0065511"
+        iyz="-1.7372E-05"
+        izz="0.011551" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="LFS">
+    <inertial>
+      <origin
+        xyz="0.04556 0.0083094 0.0029762"
+        rpy="0 0 0" />
+      <mass
+        value="0.072793" />
+      <inertia
+        ixx="2.2093E-05"
+        ixy="-1.6485E-08"
+        ixz="-1.5645E-07"
+        iyy="1.6263E-05"
+        iyz="2.9641E-09"
+        izz="1.8084E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/LFS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/LFS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFS"
+    type="fixed">
+    <origin
+      xyz="0.20441 0.054044 -0.014503"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LFS" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LFW">
+    <inertial>
+      <origin
+        xyz="0.015 0 3.4694E-18"
+        rpy="0 0 0" />
+      <mass
+        value="0.76708" />
+      <inertia
+        ixx="0.0011643"
+        ixy="4.4576E-22"
+        ixz="-1.8299E-20"
+        iyy="0.00063966"
+        iyz="-1.3553E-20"
+        izz="0.00063966" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/LFW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/LFW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LFW"
+    type="continuous">
+    <origin
+      xyz="0.063346 -0.006798 0.015044"
+      rpy="-1.6264 0 0" />
+    <parent
+      link="LFS" />
+    <child
+      link="LFW" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="RFS">
+    <inertial>
+      <origin
+        xyz="-0.019183 -0.0090093 0.052006"
+        rpy="0 0 0" />
+      <mass
+        value="0.072793" />
+      <inertia
+        ixx="2.2093E-05"
+        ixy="-1.6485E-08"
+        ixz="1.5645E-07"
+        iyy="1.6263E-05"
+        iyz="-2.9641E-09"
+        izz="1.8084E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/RFS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/RFS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFS"
+    type="fixed">
+    <origin
+      xyz="-0.020784 0.10307 0.0027844"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RFS" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="RFW">
+    <inertial>
+      <origin
+        xyz="-0.015 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.76708" />
+      <inertia
+        ixx="0.0011643"
+        ixy="-1.2315E-36"
+        ixz="0"
+        iyy="0.00063966"
+        iyz="8.0046E-39"
+        izz="0.00063966" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/RFW.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/RFW.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RFW"
+    type="continuous">
+    <origin
+      xyz="-0.036969 -0.024084 0.064073"
+      rpy="0 0 0" />
+    <parent
+      link="RFS" />
+    <child
+      link="RFW" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      effort="3.1"
+      velocity="7" />
+  </joint>
+  <link
+    name="RBS">
+    <inertial>
+      <origin
+        xyz="0 -0.045029 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.44204" />
+      <inertia
+        ixx="0.00028466"
+        ixy="5.986E-23"
+        ixz="-7.0058E-22"
+        iyy="0.00017531"
+        iyz="1.561E-21"
+        izz="0.0002841" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/RBS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/RBS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="RBS"
+    type="fixed">
+    <origin
+      xyz="0.25 0.202 0.0087742"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="RBS" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="LBS">
+    <inertial>
+      <origin
+        xyz="0 -0.045029 -2.7756E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.44204" />
+      <inertia
+        ixx="0.00028466"
+        ixy="-1.2721E-21"
+        ixz="-4.8787E-23"
+        iyy="0.00017531"
+        iyz="1.4271E-21"
+        izz="0.0002841" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/LBS.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/LBS.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="LBS"
+    type="fixed">
+    <origin
+      xyz="-0.040003 0.202 0.0087742"
+      rpy="1.5708 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="LBS" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="fcam">
+    <inertial>
+      <origin
+        xyz="-0.011554 -2.6447E-06 0.0012903"
+        rpy="0 0 0" />
+      <mass
+        value="0.043612" />
+      <inertia
+        ixx="2.3571E-05"
+        ixy="-1.0183E-09"
+        ixz="2.1759E-08"
+        iyy="4.2948E-06"
+        iyz="-8.851E-10"
+        izz="2.2106E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/fcam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/fcam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="fcam"
+    type="fixed">
+    <origin
+      xyz="0.105000000000001 0.00130733614121363 0.155139653188175"
+      rpy="0 0.0872664625997096 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="fcam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="bcam">
+    <inertial>
+      <origin
+        xyz="-0.020103 -2.6435E-06 -0.0072587"
+        rpy="0 0 0" />
+      <mass
+        value="0.043612" />
+      <inertia
+        ixx="2.3571E-05"
+        ixy="-1.0183E-09"
+        ixz="2.1758E-08"
+        iyy="4.2948E-06"
+        iyz="-8.8548E-10"
+        izz="2.2106E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/bcam.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/bcam.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="bcam"
+    type="fixed">
+    <origin
+      xyz="0.105 0 0.11323"
+      rpy="0 0.7854 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="bcam" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="Lidar">
+    <inertial>
+      <origin
+        xyz="0.013523 0.00046196 -0.028765"
+        rpy="0 0 0" />
+      <mass
+        value="0.073085" />
+      <inertia
+        ixx="1.9581E-05"
+        ixy="-1.0393E-07"
+        ixz="-4.2839E-07"
+        iyy="2.4125E-05"
+        iyz="9.4271E-09"
+        izz="4.1418E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/Lidar.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/Lidar.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="Lidar"
+    type="fixed">
+    <origin
+      xyz="0.10401 0.19458 0.2285"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="Lidar" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="imu_link">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/imu_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://lide/meshes/imu_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="imu_link"
+    type="fixed">
+    <origin
+      xyz="0.105 0.039 0.177"
+      rpy="0 0 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="imu_link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
